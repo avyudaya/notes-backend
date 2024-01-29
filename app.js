@@ -14,6 +14,7 @@ mongoose.connect(config.MONGO_URI)
     .catch(err => logger.error(err.message));
 
 app.use(cors());
+app.use(express.static("dist"));
 app.use(express.json());
 app.use(requestLogger);
 
